@@ -1,0 +1,5 @@
+FROM sqlite:3.33.0
+
+COPY data.db /data/data.db
+
+CMD ["sqlite3", "/data/data.db"]
