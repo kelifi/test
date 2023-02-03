@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import requests
 from bs4 import BeautifulSoup
 import sqlite3
-import requests
+
 
 app = FastAPI()
 
@@ -38,5 +38,17 @@ def save_to_database(data):
 
 
 
+'''
+Some times when you run the scrape_facebook_page you get an empty list, these are some reasons could explain this problem:
 
+It's possible that the website you're trying to scrape is blocking your request. 
+Some websites have anti-scraping measures in place to prevent automated scraping.
+
+Another possible reason for getting an empty dictionary is if the elements you are 
+trying to scrape are not in the "p" HTML tag. Try inspecting the source code of the 
+page you're trying to scrape and make sure the information you're looking for is in the "p" tag.
+
+It's also possible that the website's structure has changed, which can break your code. 
+If that's the case, you'll need to update your code to match the new structure of the website.
+'''
 
